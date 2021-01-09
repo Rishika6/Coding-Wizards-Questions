@@ -6,6 +6,8 @@ import java.util.*;
     {
 /*Write an efficient program that takes two strings as arguments and removes 
 the characters from the first string, which are present in the second string.*/
+		 //FastReader fr=new FastReader();
+		 
 		
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 	    String s1=br.readLine();
@@ -18,6 +20,9 @@ the characters from the first string, which are present in the second string.*/
 	    	
 	    }
 	    boolean marked[]=new boolean[s1.length()];
+		 for(int i=0;i<marked.length;i++){
+		    marked[i]=false;
+		 }
 	    for(int i=0;i<s1.length();i++) {
 	    	if(set.contains(ch[i])) {
 	    		marked[i]=true;
